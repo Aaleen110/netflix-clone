@@ -1,24 +1,13 @@
 import React from 'react'
 import ProfileTile from '../../components/profileTile';
-import Text from '../../components/text';
-import colors from '../../utils/colors';
 import profiles from '../../utils/commonJson';
 
 export default function ManageProfile() {
     return (
-        <div style={{
-            backgroundColor: colors.backgroundTheme,
-            display: 'flex',
-            flexDirection: 'column',
-            height: "100vh",
-
-
-        }}>
+        <div className='container'>
             <div style={{ height: '35%', display: 'flex', justifyContent: 'center', alignItems: 'flex-end' }}>
                 <div className='profile-title'>{"Who's watching?"}</div>
             </div>
-
-
             <div className='profile-container'>
                 {profiles.map((profile) => {
                     return <ProfileTile
@@ -33,8 +22,6 @@ export default function ManageProfile() {
                     Manage Profiles
                 </div>
             </div>
-
-
-        </div >
+        </div>
     )
 }

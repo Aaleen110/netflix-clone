@@ -1,12 +1,17 @@
 
-.container {
-  background-color: "red";
-  display: flex;
-  height: '100%';
-  width: '100%';
-  font-size: 100px;
+:root {
+  --bg-theme: #141414;
+  --primary-text-white: #fefefe;
+  --secondary-text-grey: #808080;
 }
 
+/* Manage Profile */
+.container {
+  background-color: var(--bg-theme);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
 
 .btn-manage-profile{
     border-width: 1px;
@@ -43,7 +48,7 @@
     font-size: 18px,;
     padding: 4px;
     font-weight: 500; 
-    color: 'red';
+    color: var(--secondary-text-grey);
     cursor: pointer;
   }
 
@@ -57,10 +62,11 @@
   .profile-title{
     font-size: 55px;
     font-weight: 400;
-    color: #fefefe;
+    color: var(--primary-text-white);
     padding: 16px
   }
 
+  /* Manage Profile Media */
   @media(max-width: 640px){
     .profile-container{
       flex-wrap: wrap;
@@ -80,4 +86,9 @@
       font-size: 12px;
     }
   }
+
+
+  /* Main Page */
+
+  /* Main Page Media */
 
