@@ -1,9 +1,11 @@
 import './App.css';
+import MainPage from './screens/mainPage';
 import ManageProfile from './screens/manageProfile';
 
 function App() {
   return (
-    <ManageProfile />
+    <MainPage />
+    // <ManageProfile />
     // <div className="App">
     //   Hello Netflix
     // </div>

@@ -8,10 +8,7 @@ export default function ProfileTile({ title, asset }) {
             <img
                 className='profile-tile'
                 src={asset} />
-
-            <div className='display-name' style={{ color: colors.secondaryTextGrey }}>{title}</div>
-
-
+            <div className='display-name'>{title}</div>
         </div>
     )
 }
