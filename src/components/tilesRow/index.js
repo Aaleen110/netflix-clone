@@ -1,19 +1,23 @@
 import React, { useEffect, useState } from 'react'
-import axios from "../../services/axios"
-export default function TilesRow({ title, requestUrl }) {
+import axios, { imageBaseUrl } from "../../services/axios"
+export default function TilesRow({ title, requestUrl, topRow }) {
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
         async function getMovies() {
-            const request = await axios.get(requestUrl);
-            console.log("request: ", request.data.results);
-            console.log("reques2t: ", requestUrl);
+            const response = await axios.get(requestUrl);
+            setMovies(response.data.results);
         };
-
         getMovies();
-    }, [movies]);
+    }, [requestUrl]);
 
     return (
-        <div>{title}</div>
+        <div className='row-container'>
+            <h2 className='row-title'>{title}</h2>
+
+            <div className='tiles-row-container'>
+                {movies.map(movie => (<img key={movie.id} className={`image-tile ${topRow && "image-tile-top-row"}`} src={`${imageBaseUrl}${topRow ? movie.poster_path : movie.backdrop_path}`} alt={movie.name} />))}
+            </div>
+        </div>
     )
 }
