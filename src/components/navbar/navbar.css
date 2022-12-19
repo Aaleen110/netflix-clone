@@ -1,0 +1,23 @@
+.container-navbar {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    z-index:3;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+
+.after-scroll {
+    background-color: #111;
+    transition:  0.5s;
+    transition-timing-function: ease-in;
+}
+
+.inner-container{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    padding: 0px 40px;
+}

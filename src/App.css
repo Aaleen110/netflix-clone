@@ -1,4 +1,13 @@
+* {
+  margin:0;
+}
 
+body {
+  background-color: #141414;
+}
+
+
+and
 :root {
   --bg-theme: #141414;
   --primary-text-white: #fefefe;
@@ -11,6 +20,7 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+  width: 100%;
 }
 
 .btn-manage-profile{
@@ -89,6 +99,56 @@
 
 
   /* Main Page */
+
+  .container-main {
+    background-color: var(--bg-theme);
+    display: flex;
+    flex-direction: column;
+   
+  }
+
+
+  /* Tiles Row */
+  .row-container{
+    margin-left: 16px;
+  }
+
+  .tiles-row-container{
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+  }
+
+  .tiles-row-container::-webkit-scrollbar{
+    display: none;
+  }
+
+  .row-title{
+    color: #fff;
+  }
+
+  .image-tile{
+    max-width: 100%;
+    border-radius: 4px;
+    object-fit: contain;
+    max-height: 150px;
+    margin-right: 10px;
+    transition:  transform 450ms;
+
+  }
+
+  .image-tile:hover{
+    transform: scale(1.08)
+  }
+
+  .image-tile-top-row{
+    max-height: 250px;
+  }
+  .image-tile-top-row:hover{
+    transform: scale(1.09)
+  }
 
   /* Main Page Media */
 
