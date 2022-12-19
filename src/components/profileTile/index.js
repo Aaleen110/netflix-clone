@@ -3,8 +3,6 @@ import { useNavigate } from "react-router-dom";
 import routes from '../../utils/routes';
 
 export default function ProfileTile({ title, asset }) {
-
-
     const navigate = useNavigate();
     const navigateToMain = () => {
         navigate(routes.browse)
