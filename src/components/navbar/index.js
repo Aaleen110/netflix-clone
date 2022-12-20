@@ -4,11 +4,12 @@ import "./navbar.css"
 import NetflixLogo from '../../assets/svgs/netflix-icon.svg'
 import ProfileIcon from '../../assets/svgs/profile-icon-4.svg'
 import routes from '../../utils/routes'
+import useWindowSize from '../../utils/hooks/useWindowSize';
 
 function Navbar() {
     let arrOptions = [{ id: 1, title: "Home" }, { id: 2, title: "TV Shows" }, { id: 3, title: "Movies" }, { id: 4, title: "News & Popular" }, { id: 5, title: "My List" }, { id: 6, title: "Browse by Language" }];
     const navigate = useNavigate();
-
+    const screenSize = useWindowSize();
     const [offset, setOffset] = useState(0);
 
     useEffect(() => {
@@ -23,11 +24,15 @@ function Navbar() {
         navigate(routes.profile)
     }
 
+    console.log("screenSize", screenSize)
+
     return (
         <div className={`container-navbar ${offset > 30 && `after-scroll`}`}>
             <div className='inner-container'>
-                <img width={120} style={{ objectFit: 'contain' }} src={NetflixLogo} />
-                {arrOptions.map((element, index) => <h5 style={{ paddingLeft: 16, color: index == 0 ? 'white' : '#B6B5B6' }}>{element.title}</h5>)}
+                <img className='netflix-logo' src={NetflixLogo} />
+                {screenSize.width > 640 ?
+                    arrOptions.map((element, index) => <h5 style={{ paddingLeft: 16, color: index == 0 ? 'white' : '#B6B5B6' }}>{element.title}</h5>)
+                    : null}
             </div>
 
             <div className='inner-container'>

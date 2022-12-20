@@ -75,26 +75,7 @@ body {
     padding: 16px
   }
 
-  /* Manage Profile Media */
-  @media(max-width: 640px){
-    .profile-container{
-      flex-wrap: wrap;
-      width: 100%;
-    }
 
-    .profile-tile{
-      height: 90px;
-      width: 90px;
-      margin: 4px 8px;
-    }
-
-    .profile-title{
-      font-size: 36px;
-    }
-    .btn-manage-profile{
-      font-size: 12px;
-    }
-  }
 
 
   /* Main Page */
@@ -151,3 +132,44 @@ body {
 
   /* Main Page Media */
 
+
+    /* Manage Profile Media */
+    @media(max-width: 640px){
+      .profile-container{
+        flex-wrap: wrap;
+        width: 100%;
+      }
+  
+      .profile-tile{
+        height: 90px;
+        width: 90px;
+        margin: 4px 8px;
+      }
+  
+      .profile-title{
+        font-size: 36px;
+      }
+      .btn-manage-profile{
+        font-size: 12px;
+      }
+
+
+      .image-tile{
+        max-width: 100%;
+        border-radius: 4px;
+        object-fit: contain;
+        max-height: 100px;
+        margin-right: 10px;
+        transition:  transform 450ms;
+  
+      }
+
+      .image-tile-top-row{
+        max-height: 220px;
+      }
+
+      .row-title{
+        color: #fff;
+        font-size: 18px;
+      }
+    }

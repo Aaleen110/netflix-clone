@@ -19,7 +19,7 @@ function Cover() {
         // <div style={{  zIndex: 1, height: '100vh', width: '100vw' }}>
 
         // <div className='faded-bottom'></div>
-        <div style={{ height: 700, zIndex: 1, position:'relative' }}>
+        <div style={{  zIndex: 1, position:'relative' }}>
            
             <div
                 className='cover-main'
@@ -30,8 +30,8 @@ function Cover() {
                 }}
             >
                 <div className='cover-contents'>
-                    <h1 className='movie_title'>{movie.title || movie.name || movie.original_name}</h1>
-                    <h3 style={{ fontWeight: 'normal' }}>{movie.overview?.length > 200 ? movie.overview.substring(0, 200) + '...' : movie.overview}</h3>
+                    <h1 className='movie-title'>{movie.title || movie.name || movie.original_name}</h1>
+                    <h3 className='movie-overview'>{movie.overview?.length > 200 ? movie.overview.substring(0, 200) + '...' : movie.overview}</h3>
 
                     <div style={{ paddingTop: 8 }}>
                         <button className='btn-play'><i className="fa fa-play" ></i> Play</button>
