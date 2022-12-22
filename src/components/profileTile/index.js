@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
 import routes from '../../utils/routes';
+import './profiletile.css'
 
 export default function ProfileTile({ title, asset }) {
     const navigate = useNavigate();
@@ -9,7 +10,7 @@ export default function ProfileTile({ title, asset }) {
     }
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+        <div className='profile-main'>
             <img
                 onClick={navigateToMain}
                 className='profile-tile'

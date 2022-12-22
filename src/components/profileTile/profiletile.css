@@ -1,0 +1,34 @@
+.profile-main{
+    display:flex;
+    flex-direction:column;
+     justify-content: center;
+     align-items: center;
+}
+
+.profile-tile{
+    height: 144px;
+    width: 144px;
+    border-radius: 6px;
+    object-fit: cover;
+    margin: 8px 16px;
+    cursor: pointer;
+  }
+
+  .profile-tile:hover {
+    background: #e1e1e1;
+    box-shadow: 0 0 0 2px #d0d0d0;
+   
+  }
+
+  @media(max-width: 640px){
+    .profile-container{
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .profile-tile{
+      height: 90px;
+      width: 90px;
+      margin: 4px 8px;
+    }
+  }
