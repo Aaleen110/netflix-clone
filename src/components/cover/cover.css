@@ -78,7 +78,7 @@
 @media(max-width: 640px){
   .cover-main {
     height: 400px;
-    /* object-fit: contain; */
+    object-fit: fill;
     color: white;
     display: flex;
     z-index: 1;
