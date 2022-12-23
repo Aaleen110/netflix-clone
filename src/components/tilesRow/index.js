@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios, { imageBaseUrl } from "../../services/axios"
+import "./tilesrow.css"
 export default function TilesRow({ title, requestUrl, topRow }) {
     const [movies, setMovies] = useState([]);
 

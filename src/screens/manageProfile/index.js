@@ -4,7 +4,7 @@ import profiles from '../../utils/commonJson';
 
 export default function ManageProfile() {
     return (
-        <div className='container'>
+        <div className='container-manage-profile'>
             <div style={{ height: '35%', display: 'flex', justifyContent: 'center', alignItems: 'flex-end' }}>
                 <div className='profile-title'>{"Who's watching?"}</div>
             </div>

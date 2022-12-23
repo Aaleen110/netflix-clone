@@ -1,5 +1,3 @@
-// import ProfileIcon1 from '../../assets/svgs/profile-icon-1.svg'
-
 import ProfileIcon1 from "../assets/svgs/profile-icon-1.svg"
 import ProfileIcon2 from "../assets/svgs/profile-icon-2.svg"
 import ProfileIcon3 from "../assets/svgs/profile-icon-3.svg"

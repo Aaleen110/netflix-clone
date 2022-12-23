@@ -18,7 +18,7 @@ export default function MainPage() {
 
   }, [])
   return (
-    <div className='container-main'>
+    <div className='container-main-page'>
 
       {/* navbar */}
       <Navbar selectedProfile={selectedProfile} />
@@ -28,7 +28,6 @@ export default function MainPage() {
 
       {/* resuable component */}
       <div style={{ paddingTop: 16, }}>
-
         <TilesRow title="Netflix Originals" requestUrl={requests.fetchTrending} topRow />
         <TilesRow title="Top Rated" requestUrl={requests.fetchTopRated} />
         <TilesRow title="Popular Now" requestUrl={requests.fetchPopular} />
