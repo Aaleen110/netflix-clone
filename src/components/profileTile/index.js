@@ -5,14 +5,15 @@ import './profiletile.css'
 
 export default function ProfileTile({ title, asset }) {
     const navigate = useNavigate();
-    const navigateToMain = () => {
+    const navigateToMain = (payload) => {
+        localStorage.setItem('selectedProfile', JSON.stringify(payload));
         navigate(routes.browse)
     }
 
     return (
         <div className='profile-main'>
             <img
-                onClick={navigateToMain}
+                onClick={()=>navigateToMain({title, asset})}
                 className='profile-tile'
                 src={asset} />
             <div className='display-name'>{title}</div>

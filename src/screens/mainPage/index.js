@@ -1,15 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Cover from '../../components/cover'
 import Navbar from '../../components/navbar'
 import TilesRow from '../../components/tilesRow'
 import requests from '../../services/requests'
 
 export default function MainPage() {
+
+  const [selectedProfile, setSelectedProfile] = useState({})
+
+  useEffect(() => {
+
+    async function getSelectedProfile() {
+      const selectedProfile = await localStorage.getItem('selectedProfile');
+      setSelectedProfile(JSON.parse(selectedProfile));
+    };
+    getSelectedProfile();
+
+  }, [])
   return (
     <div className='container-main'>
 
       {/* navbar */}
-      <Navbar />
+      <Navbar selectedProfile={selectedProfile} />
 
       {/* cover */}
       <Cover />
