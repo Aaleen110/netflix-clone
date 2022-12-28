@@ -21,6 +21,20 @@ body {
   width: 100%;
 }
 
+.btn-manage-profile-container{
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.who-is-watching-container{
+  height: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end
+}
+
 .btn-manage-profile{
     border-width: 1px;
     border-color: rgb(128, 128, 128);

@@ -8,7 +8,6 @@ function App() {
   return (
     <HashRouter>
       <Routes>
-        {/* <Route path="/" element={<MainPage />} /> */}
         <Route path="/browse" element={<MainPage />} />
         <Route path="/profiles" element={<ManageProfile />} />
         <Route path="/" element={<Navigate replace to="/profiles" />} />
