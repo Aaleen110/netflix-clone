@@ -7,6 +7,7 @@ export default function TilesRow({ title, requestUrl, topRow }) {
     useEffect(() => {
         async function getMovies() {
             const response = await axios.get(requestUrl);
+            console.log('Response', response)
             setMovies(response.data.results);
         };
         getMovies();
@@ -17,7 +18,7 @@ export default function TilesRow({ title, requestUrl, topRow }) {
             <h2 className='row-title'>{title}</h2>
 
             <div className='tiles-row-container'>
-                {movies.map(movie => (<img key={movie.id} className={`image-tile ${topRow && "image-tile-top-row"}`} src={`${imageBaseUrl}${topRow ? movie.poster_path : movie.backdrop_path}`} alt={movie.name} />))}
+                {movies.map(movie => (<img key={movie.id} className={`image-tile ${topRow && "image-tile-top-row"}`} src={`${imageBaseUrl}${topRow ? movie.poster_path : movie.backdrop_path || movie.poster_path}`} alt={movie.name} />))}
             </div>
         </div>
     )
