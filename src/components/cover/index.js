@@ -16,9 +16,6 @@ function Cover() {
     }, [requests.fetchTrending]);
 
     return (
-        // <div style={{  zIndex: 1, height: '100vh', width: '100vw' }}>
-
-        // <div className='faded-bottom'></div>
         <div style={{  zIndex: 1, position:'relative' }}>
            
             <div
@@ -40,6 +37,7 @@ function Cover() {
                     </div>
                 </div>
             </div>
+            {/* for faded cover effect */}
             <div className='faded-bottom'></div>
 
         </div>

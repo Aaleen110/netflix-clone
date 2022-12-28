@@ -11,6 +11,7 @@ export default function MainPage() {
   useEffect(() => {
 
     async function getSelectedProfile() {
+      // retreiving selectedProfile to highlight profile icon in navbar
       const selectedProfile = await localStorage.getItem('selectedProfile');
       setSelectedProfile(JSON.parse(selectedProfile));
     };
@@ -26,9 +27,12 @@ export default function MainPage() {
       {/* cover */}
       <Cover />
 
-      {/* resuable component */}
+      {/* resuable component tile */}
       <div style={{ paddingTop: 16, }}>
+        {/* passing special prop topRow for as top row is rendered differently in terms of size and design */}
         <TilesRow title="Netflix Originals" requestUrl={requests.fetchTrending} topRow />
+
+        {/* Rest of the tiles */}
         <TilesRow title="Top Rated" requestUrl={requests.fetchTopRated} />
         <TilesRow title="Popular Now" requestUrl={requests.fetchPopular} />
         <TilesRow title="TV Shows" requestUrl={requests.fetchTVShows} />

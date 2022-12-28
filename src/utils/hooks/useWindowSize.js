@@ -1,3 +1,6 @@
+/*
+Custom hook that returns size of the window used to handle hide/show of certain UI elements in regards with viewed on mobile or web.
+*/
 import { useState, useEffect } from "react";
 
 const useWindowSize = () => {
