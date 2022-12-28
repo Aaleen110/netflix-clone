@@ -23,7 +23,6 @@ function Navbar({selectedProfile}) {
     const navigateToProfile = () => {
         navigate(routes.profile)
     }
-    console.log("screenSize", screenSize)
 
     return (
         <div className={`container-navbar ${offset > 30 && `after-scroll`}`}>
