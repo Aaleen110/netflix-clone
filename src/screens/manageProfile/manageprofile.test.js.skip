@@ -1,0 +1,46 @@
+// import { fireEvent, render, screen } from "@testing-library/react"
+// import ManageProfile from "."
+// import { HashRouter } from "react-router-dom";
+// import userEvent from "@testing-library/user-event";
+// import profiles from "../../utils/commonJson";
+// import ProfileTile from "../../components/profileTile";
+
+// test("manage profile renders successfully", () => {
+//     render(<HashRouter><ManageProfile /></HashRouter>);
+//     const element = screen.getByText("Who's watching?");
+//     expect(element).toBeInTheDocument();
+// })
+
+
+// // test("list renders successfully", ()=>{
+// //     render(<HashRouter><ManageProfile/></HashRouter>);
+
+// // })
+
+// // test("on press tile", async ()=>{
+// //     const handlePressTile = jest.fn();
+// //     render(<ProfileTile
+// //         key={profiles[0].id}
+// //         title={profiles[0].name}
+// //         asset={profiles[0].resource}
+// //         onPressTile={handlePressTile}
+// //     />)
+// //     await userEvent.click(screen.getByText(profiles[0].name));
+// //     expect(handlePressTile).toHaveBeenCalled();
+// // }) 
+
+// test("on press tile", async () => {
+//     const handlePressTile = jest.fn();
+//     render(
+//       <ProfileTile
+//         key={profiles[0].id}
+//         title={profiles[0].name}
+//         asset={profiles[0].resource}
+//         onPressTile={handlePressTile}
+//       />
+//     );
+  
+//     await userEvent.click(screen.getByText(profiles[0].name));
+//     expect(handlePressTile).toHaveBeenCalled();
+//   });
+  

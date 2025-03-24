@@ -20,6 +20,7 @@ export default function ManageProfile() {
             <div className='profile-container'>
                 {profiles.map((profile) => {
                     return <ProfileTile
+                        key={profile.id}
                         title={profile.name}
                         asset={profile.resource}
                         onPressTile={onPressTile}
