@@ -6,22 +6,27 @@ import ProfileIcon5 from "../assets/svgs/profile-icon-5.svg"
 
 const profiles = [
     {
+        id:1,
         name: "Aziz",
         resource: ProfileIcon1
     },
     {
+        id:2,
         name: "KID",
         resource: ProfileIcon2
     },
     {
+        id:3,
         name: "Santosh",
         resource: ProfileIcon3
     },
     {
+        id:4,
         name: "Aaleen",
         resource: ProfileIcon4
     },
     {
+        id:5,
         name: "Shub's",
         resource: ProfileIcon5
     }
