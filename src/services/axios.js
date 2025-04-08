@@ -1,9 +1,10 @@
 import axios from "axios";
+import { API } from "../utils/constants";
 
 const networkService = axios.create({
-    baseURL:"https://api.themoviedb.org/3"
+    baseURL: API.BASE_URL
 });
 
-export const imageBaseUrl = "https://image.tmdb.org/t/p/original/";
+export const imageBaseUrl = API.IMAGE_BASE_URL;
 
 export default networkService;

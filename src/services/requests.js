@@ -1,15 +1,15 @@
-const API_KEY = "3058f11e9fc63d81c4bf1d973374e695";
-const requests = {
-    fetchTrending: `/trending/all/week?api_key=${API_KEY}&language=en-US`,
-    fetchTopRated: `/movie/top_rated?api_key=${API_KEY}&language=en-US`,
-    fetchPopular: `/movie/popular?api_key=${API_KEY}&language=en-US`,
-    fetchTVShows:`tv/popular?api_key=${API_KEY}&language=en-US&page=1`,
+import { API } from '../utils/constants';
 
-    fetchComedy:`discover/movie?api_key=${API_KEY}&with_genres=35`,
-    fetchAction:`discover/movie?api_key=${API_KEY}&with_genres=28`,
-    fetchDocumentaries:`discover/movie?api_key=${API_KEY}&with_genres=99`,
-    fetchHorror:`discover/movie?api_key=${API_KEY}&with_genres=27`,
-    
+const requests = {
+    fetchTrending: `${API.ENDPOINTS.TRENDING}?api_key=${API.KEY}&language=${API.LANGUAGE}`,
+    fetchTopRated: `${API.ENDPOINTS.TOP_RATED}?api_key=${API.KEY}&language=${API.LANGUAGE}`,
+    fetchPopular: `${API.ENDPOINTS.POPULAR}?api_key=${API.KEY}&language=${API.LANGUAGE}`,
+    fetchTVShows: `${API.ENDPOINTS.TV_POPULAR}?api_key=${API.KEY}&language=${API.LANGUAGE}&page=${API.DEFAULT_PAGE}`,
+
+    fetchComedy: `${API.ENDPOINTS.DISCOVER}?api_key=${API.KEY}&with_genres=${API.GENRE_IDS.COMEDY}`,
+    fetchAction: `${API.ENDPOINTS.DISCOVER}?api_key=${API.KEY}&with_genres=${API.GENRE_IDS.ACTION}`,
+    fetchDocumentaries: `${API.ENDPOINTS.DISCOVER}?api_key=${API.KEY}&with_genres=${API.GENRE_IDS.DOCUMENTARY}`,
+    fetchHorror: `${API.ENDPOINTS.DISCOVER}?api_key=${API.KEY}&with_genres=${API.GENRE_IDS.HORROR}`,
 }
 
 export default requests;
