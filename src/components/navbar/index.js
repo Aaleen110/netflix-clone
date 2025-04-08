@@ -37,7 +37,11 @@ function Navbar({selectedProfile}) {
                 <div style={{ color: '#fff', fontSize: 20 }} ><i className="fa fa-search" ></i></div>
                 <h5 style={{ paddingLeft: 16, color: '#fff' }}>{'Children'}</h5>
                 <div style={{ color: '#fff', fontSize: 20, paddingLeft: 16 }} ><i className="fa fa-bell" ></i></div>
-                <img onClick={navigateToProfile} width={40} style={{ objectFit: 'contain', borderRadius: 6, marginLeft: 16 }} src={selectedProfile.asset} />
+                {selectedProfile ? (
+                  <img onClick={navigateToProfile} width={40} style={{ objectFit: 'contain', borderRadius: 6, marginLeft: 16 }} src={selectedProfile.asset} />
+                ) : (
+                  <img onClick={navigateToProfile} width={40} style={{ objectFit: 'contain', borderRadius: 6, marginLeft: 16 }} src={ProfileIcon} />
+                )}
                 <div style={{ color: '#fff', fontSize: 20, paddingLeft: 16 }} ><i className="fa fa-caret-down" ></i></div>
             </div>
 
